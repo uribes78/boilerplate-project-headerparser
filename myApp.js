@@ -7,11 +7,11 @@ const api = () => {
     let routes = new Router();
 
     // your first API endpoint...
-    app.get('/hello', function (req, res) {
+    routes.get('/hello', function (req, res) {
       res.json({ greeting: 'hello API' });
     });
 
-    app.get('/whoami', (req, res) => {
+    routes.get('/whoami', (req, res) => {
         let data = {
             ipaddress: req.ip,
             language: req.get('Accept-Language'),
@@ -23,3 +23,5 @@ const api = () => {
 
     return routes;
 };
+
+module.exports = api;
