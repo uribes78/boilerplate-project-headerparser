@@ -1,8 +1,5 @@
 const { Router } = require('express');
 
-const parseHeader = (req) => {
-};
-
 const api = () => {
     let routes = new Router();
 
